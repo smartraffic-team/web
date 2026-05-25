@@ -25,11 +25,6 @@ export const Hero = () => {
               GitHub Repository
             </button>
           </div>
-          
-          <div className="flex items-center gap-3 mt-8 text-sm text-gray-400">
-            <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
-            Selected for FETEPS 2025
-          </div>
         </div>
         
         <div className="bg-gradient-to-br from-[#FBBF24]/5 to-transparent rounded-2xl p-8 border border-white/5">
