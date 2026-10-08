@@ -9,9 +9,9 @@ export const Header = () => {
         </Link>
         
         <nav className="flex gap-6">
-          <Link to="/" className="hover:text-[#FBBF24] transition">Home</Link>
-          <Link to="/docs" className="hover:text-[#FBBF24] transition">Docs</Link>
-          <Link to="/about" className="hover:text-[#FBBF24] transition">About</Link>
+          <Link to="/" className="hover:text-[#FBBF24] transition">Início</Link>
+          <Link to="/docs" className="hover:text-[#FBBF24] transition">Documentação</Link>
+          <Link to="/about" className="hover:text-[#FBBF24] transition">Sobre</Link>
         </nav>
       </div>
     </header>
