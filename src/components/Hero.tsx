@@ -5,7 +5,7 @@ export const Hero = () => {
         <div>
           <div className="inline-flex items-center gap-2 bg-[#FBBF24]/10 px-4 py-2 rounded-full mb-6">
             <span className="w-2 h-2 bg-[#FBBF24] rounded-full animate-pulse"></span>
-            <span className="text-[#FBBF24] text-sm font-medium">Detecção em tempo real • IA na borda</span>
+            <span className="text-[#FBBF24] text-sm font-medium">Projeto acadêmico • Tecnologia e mobilidade</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
@@ -13,17 +13,18 @@ export const Hero = () => {
           </h1>
           
           <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-lg">
-            Controle inteligente de trânsito com visão computacional e inteligência artificial na borda.
-            Detecta veículos e pedestres e prioriza pessoas com mobilidade reduzida.
+            E se o semáforo acompanhasse o ritmo da sua via? Nossa proposta combina
+            visão computacional e controle adaptativo para ajustar o tempo do sinal
+            à demanda de veículos e ao tempo de espera.
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <button className="bg-[#FBBF24] hover:bg-[#F59E0B] text-[#1A1A1C] font-semibold px-6 py-3 rounded-xl transition">
-              Ver demonstração →
-            </button>
-            <button className="border border-gray-600 hover:border-[#FBBF24] px-6 py-3 rounded-xl transition">
-              Repositório no GitHub
-            </button>
+            <a href="#como-funciona" className="bg-[#FBBF24] hover:bg-[#F59E0B] text-[#1A1A1C] font-semibold px-6 py-3 rounded-xl transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FBBF24]">
+              Conheça a solução →
+            </a>
+            <a href="#equipe" className="border border-gray-600 hover:border-[#FBBF24] px-6 py-3 rounded-xl transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FBBF24]">
+              Nossa equipe
+            </a>
           </div>
         </div>
         
@@ -34,7 +35,7 @@ export const Hero = () => {
               <div className="w-10 h-10 rounded-full bg-[#FBBF24]"></div>
               <div className="w-10 h-10 rounded-full bg-green-500/20"></div>
             </div>
-            <span className="absolute bottom-4 text-xs text-gray-500">Detecção com YOLOv8</span>
+            <span className="absolute bottom-4 text-xs text-gray-400">Controle adaptativo de semáforos</span>
           </div>
         </div>
       </div>
