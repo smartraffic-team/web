@@ -8,7 +8,7 @@ import { Footer } from './components/Footer'
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col bg-[#1A1A1C] text-white">
+      <div className="min-h-screen flex flex-col bg-[#181C2B] text-[#EBEAEB]">
         <Header />
         <main className="flex-grow">
           <Routes>
