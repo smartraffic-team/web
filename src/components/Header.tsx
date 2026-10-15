@@ -8,11 +8,11 @@ export const Header = () => {
         <Link to="/" className="flex items-center gap-2">
           <BrandLogo />
         </Link>
-        
+
         <nav aria-label="Navegação principal" className="flex flex-wrap gap-4 sm:gap-6 text-sm sm:text-base">
-          <Link to="/" className="hover:text-[#FBC117] transition">Início</Link>
-          <Link to="/docs" className="hover:text-[#FBC117] transition">Documentação</Link>
-          <Link to="/about" className="hover:text-[#FBC117] transition">Sobre</Link>
+          <Link to="/" className="font-title hover:text-[#FBC117] transition">Início</Link>
+          <Link to="/about" className="font-title hover:text-[#FBC117] transition">O projeto</Link>
+          <Link to="/docs" className="font-title hover:text-[#FBC117] transition">Documentação</Link>
         </nav>
       </div>
     </header>

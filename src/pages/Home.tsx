@@ -1,5 +1,7 @@
 import { Hero } from '../components/Hero'
 import graphic from '../../imgs/ELEMENTOS GRAFICOS 1.png'
+import kit from '../../imgs/MOCKUP KIT CAMERA.png'
+import application from '../../imgs/EXEMPLO 1 APLICAÇÃO.png'
 
 const steps = [
   { title: 'Capturar', text: 'Câmeras posicionadas nos cruzamentos capturam imagens das vias.' },
@@ -15,11 +17,26 @@ export const Home = () => {
     <>
       <Hero />
 
+      <section aria-label="Resumo do protótipo" className="border-y border-white/10 bg-[#141827]">
+        <div className="max-w-6xl mx-auto px-6 py-8 grid gap-6 sm:grid-cols-3">
+          {[
+            ['01', 'cruzamento', 'maquete acadêmica em estudo'],
+            ['02', 'grupos de sinal', 'controle local A e B'],
+            ['03', 'objetivo de pesquisa', 'comparar tempo de espera'],
+          ].map(([number, title, text]) => (
+            <div key={title} className="flex items-start gap-4">
+              <span className="font-title text-2xl font-bold text-[#FBC117]">{number}</span>
+              <div><p className="font-semibold">{title}</p><p className="text-sm text-gray-400 mt-1">{text}</p></div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section aria-labelledby="problema-titulo" className="border-y border-white/10 bg-[#1E2436]">
         <div className="max-w-6xl mx-auto px-6 py-20 grid gap-10 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">O ponto de partida</p>
-            <h2 id="problema-titulo" className="text-3xl md:text-4xl font-bold leading-tight">Sinal fechado. Cruzamento vazio. Uma fila que só cresce.</h2>
+            <h2 id="problema-titulo" className="font-title text-3xl md:text-4xl font-bold leading-tight">Sinal fechado. Cruzamento vazio. Uma fila que só cresce.</h2>
           </div>
           <div className="space-y-5 text-gray-300 leading-relaxed">
             <p>Você já passou por essa situação? Muitos semáforos operam com tempos pré-programados, sem considerar quantos veículos estão esperando naquele momento.</p>
@@ -30,13 +47,13 @@ export const Home = () => {
 
       <section id="como-funciona" aria-labelledby="funcionamento-titulo" className="scroll-mt-24 max-w-6xl mx-auto px-6 py-20">
         <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">Como funciona a proposta</p>
-        <h2 id="funcionamento-titulo" className="text-3xl md:text-4xl font-bold mb-5">Da imagem à decisão.</h2>
+        <h2 id="funcionamento-titulo" className="font-title text-3xl md:text-4xl font-bold mb-5">Da imagem à decisão.</h2>
         <p className="text-gray-300 max-w-2xl leading-relaxed">A ideia é transformar as imagens do cruzamento em informações úteis para decidir como distribuir o tempo de passagem entre as vias.</p>
         <ol className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 mt-10">
           {steps.map((step, index) => (
             <li key={step.title} className="rounded-2xl border border-white/10 bg-[#1E2436] p-6">
-              <span aria-hidden="true" className="text-3xl font-bold text-[#FBC117]">0{index + 1}</span>
-              <h3 className="text-xl font-semibold mt-6 mb-3">{step.title}</h3>
+              <span aria-hidden="true" className="font-title text-3xl font-bold text-[#FBC117]">0{index + 1}</span>
+              <h3 className="font-title text-xl font-semibold mt-6 mb-3">{step.title}</h3>
               <p className="text-gray-300 leading-relaxed">{step.text}</p>
             </li>
           ))}
@@ -47,16 +64,16 @@ export const Home = () => {
         <div className="rounded-3xl border border-[#FBC117]/20 bg-[#FBC117]/5 p-6 md:p-10 grid gap-10 lg:grid-cols-2">
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">Uma decisão mais equilibrada</p>
-            <h2 id="prioridade-titulo" className="text-3xl md:text-4xl font-bold mb-5">O fluxo importa. O tempo de espera também.</h2>
+            <h2 id="prioridade-titulo" className="font-title text-3xl md:text-4xl font-bold mb-5">O fluxo importa. O tempo de espera também.</h2>
             <p className="text-gray-300 leading-relaxed">Priorizar apenas a via mais movimentada pode deixar as outras esperando por tempo excessivo. Nossa estratégia considera dois fatores para buscar uma distribuição mais equilibrada do sinal verde.</p>
           </div>
           <div className="space-y-5">
             <div className="border-l-2 border-[#FBC117] pl-5">
-              <h3 className="text-xl font-semibold mb-2">Demanda de veículos</h3>
+              <h3 className="font-title text-xl font-semibold mb-2">Demanda de veículos</h3>
               <p className="text-gray-300 leading-relaxed">Uma via com mais veículos pode receber mais tempo de passagem, acompanhando a demanda observada.</p>
             </div>
             <div className="border-l-2 border-[#FBC117] pl-5">
-              <h3 className="text-xl font-semibold mb-2">Tempo de espera</h3>
+              <h3 className="font-title text-xl font-semibold mb-2">Tempo de espera</h3>
               <p className="text-gray-300 leading-relaxed">O tempo acumulado de espera também entra na decisão, para que as vias de menor fluxo não sejam continuamente deixadas em segundo plano.</p>
             </div>
             <p className="text-sm text-gray-300 border-t border-white/10 pt-5">Por exemplo: uma via com fila maior pode ter o verde prolongado, enquanto a espera da outra via é considerada na próxima decisão.</p>
@@ -67,7 +84,7 @@ export const Home = () => {
       <section aria-labelledby="objetivos-titulo" className="border-y border-white/10 bg-[#1E2436]">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">Tecnologia aplicada</p>
-          <h2 id="objetivos-titulo" className="text-3xl md:text-4xl font-bold mb-5">Um problema real como espaço de aprendizado.</h2>
+          <h2 id="objetivos-titulo" className="font-title text-3xl md:text-4xl font-bold mb-5">Um problema real como espaço de aprendizado.</h2>
           <p className="text-gray-300 max-w-3xl leading-relaxed">Como estudantes de um curso de Tecnologia, conectamos visão computacional, análise de dados e desenvolvimento de algoritmos em uma proposta acadêmica voltada à mobilidade urbana.</p>
           <div className="grid gap-8 md:grid-cols-3 mt-10">
             {[
@@ -76,7 +93,7 @@ export const Home = () => {
               { title: 'Aprender com os dados', text: 'Investigar como transformar imagens e contagens em decisões de controle adaptativo.' },
             ].map((goal) => (
               <div key={goal.title} className="border-t border-[#FBC117]/40 pt-5">
-                <h3 className="text-xl font-semibold mb-3">{goal.title}</h3>
+                <h3 className="font-title text-xl font-semibold mb-3">{goal.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{goal.text}</p>
               </div>
             ))}
@@ -85,16 +102,37 @@ export const Home = () => {
         </div>
       </section>
 
+      <section aria-labelledby="artefatos-titulo" className="max-w-6xl mx-auto px-6 py-20">
+        <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr] items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">Do conceito ao protótipo</p>
+            <h2 id="artefatos-titulo" className="font-title text-3xl md:text-4xl font-bold">Uma ideia que também pode ser vista.</h2>
+            <p className="text-gray-300 leading-relaxed mt-5">A identidade visual e os mockups ajudam a comunicar a pesquisa enquanto a equipe evolui a maquete, o código de visão e a plataforma de monitoramento.</p>
+            <a href="#equipe" className="inline-flex mt-7 text-[#FBC117] font-semibold hover:underline">Conheça a equipe →</a>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <figure className="rounded-2xl overflow-hidden border border-white/10 bg-[#1E2436]">
+              <img src={kit} alt="Mockup conceitual do kit de câmera SmartTraffic" className="w-full aspect-square object-cover" loading="lazy" />
+              <figcaption className="p-3 text-xs text-gray-400">Kit de captura</figcaption>
+            </figure>
+            <figure className="rounded-2xl overflow-hidden border border-white/10 bg-[#1E2436] mt-8">
+              <img src={application} alt="Exemplo visual da aplicação SmartTraffic" className="w-full aspect-square object-cover" loading="lazy" />
+              <figcaption className="p-3 text-xs text-gray-400">Aplicação visual</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <section id="equipe" aria-labelledby="equipe-titulo" className="scroll-mt-24 max-w-6xl mx-auto px-6 py-20">
         <img src={graphic} alt="" aria-hidden="true" width="3698" height="1708" loading="lazy" decoding="async" className="w-full h-24 sm:h-36 object-cover rounded-2xl mb-12" />
         <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">Quem está por trás</p>
-        <h2 id="equipe-titulo" className="text-3xl md:text-4xl font-bold mb-5">Cinco estudantes. Um projeto em comum.</h2>
+        <h2 id="equipe-titulo" className="font-title text-3xl md:text-4xl font-bold mb-5">Cinco estudantes. Um projeto em comum.</h2>
         <p className="text-gray-300 max-w-2xl leading-relaxed">Somos a equipe de desenvolvimento do SmartTraffic. Nosso trabalho reúne estudo e prática para explorar novas possibilidades no controle de trânsito.</p>
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5 mt-10">
           {members.map((member) => (
             <li key={member} className="rounded-2xl border border-white/10 bg-[#1E2436] p-6">
-              <div aria-hidden="true" className="w-12 h-12 rounded-full bg-[#FBC117]/10 text-[#FBC117] flex items-center justify-center text-xl font-bold mb-5">{member.charAt(0)}</div>
-              <h3 className="text-lg font-semibold">{member}</h3>
+              <div aria-hidden="true" className="w-12 h-12 rounded-full bg-[#FBC117]/10 text-[#FBC117] flex items-center justify-center font-title text-xl font-bold mb-5">{member.charAt(0)}</div>
+              <h3 className="font-title text-lg font-semibold">{member}</h3>
               <p className="text-sm text-gray-400 mt-2">Equipe de desenvolvimento</p>
             </li>
           ))}

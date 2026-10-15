@@ -1,5 +1,4 @@
 import { BrandLogo } from './BrandLogo'
-import { Link } from 'react-router-dom'
 
 const linkStyle = 'transition hover:text-[#FBC117] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FBC117]'
 
@@ -15,25 +14,25 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 pt-14 pb-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1fr_1fr]">
           <div>
-            <Link to="/" className={`inline-block rounded-lg ${linkStyle}`}>
+            <a href="#inicio" className={`inline-block rounded-lg ${linkStyle}`}>
               <BrandLogo />
-            </Link>
+            </a>
             <p className="mt-4 max-w-xs leading-relaxed">Tecnologia, visão computacional e controle adaptativo para repensar a mobilidade urbana.</p>
             <p className="mt-4 text-xs font-medium uppercase tracking-widest text-[#FBC117]">Projeto acadêmico • Feito em equipe</p>
           </div>
 
           <nav aria-label="Navegação do rodapé">
-            <h2 className="font-semibold text-base text-[#EBEAEB] mb-5">Explore o projeto</h2>
+            <h2 className="font-title font-semibold text-base text-[#EBEAEB] mb-5">Explore o projeto</h2>
             <ul className="space-y-3">
-              <li><Link to="/" className={linkStyle}>Início</Link></li>
-              <li><Link to="/docs" className={linkStyle}>Documentação</Link></li>
-              <li><Link to="/about" className={linkStyle}>Sobre o projeto</Link></li>
-              <li><a href="/#equipe" className={linkStyle}>Nossa equipe</a></li>
+              <li><a href="#inicio" className={linkStyle}>Início</a></li>
+              <li><a href="#documentacao" className={linkStyle}>Documentação</a></li>
+              <li><a href="#projeto" className={linkStyle}>O projeto</a></li>
+              <li><a href="#equipe" className={linkStyle}>Nossa equipe</a></li>
             </ul>
           </nav>
 
           <div>
-            <h2 className="font-semibold text-base text-[#EBEAEB] mb-5">Endereço e contato</h2>
+            <h2 className="font-title font-semibold text-base text-[#EBEAEB] mb-5">Endereço e contato</h2>
             <address className="not-italic leading-relaxed space-y-3">
               <p>Campus de Tecnologia<br />Rua Exemplo, 123 — Centro<br />São Paulo — SP</p>
               <p className="break-words">contato@smarttraffic.example<br />(11) 0000-0000</p>
@@ -42,7 +41,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h2 className="font-semibold text-base text-[#EBEAEB] mb-5">Nas redes</h2>
+            <h2 className="font-title font-semibold text-base text-[#EBEAEB] mb-5">Nas redes</h2>
             <ul className="space-y-3">
               {Object.entries(socialIcons).map(([name, icon]) => (
                 <li key={name}>

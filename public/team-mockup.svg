@@ -1,0 +1,20 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="500" rx="36" fill="#1E2436"/>
+  <circle cx="390" cy="84" r="62" fill="#FBC117" fill-opacity=".12"/>
+  <circle cx="86" cy="430" r="96" fill="#FBC117" fill-opacity=".08"/>
+  <path d="M0 373C110 310 207 355 314 319C391 293 436 300 500 272V500H0V373Z" fill="#151A29"/>
+  <path d="M70 327L250 224L430 327V352H70V327Z" fill="#FBC117" fill-opacity=".9"/>
+  <path d="M125 315L250 244L375 315V327H125V315Z" fill="#252E47"/>
+  <rect x="104" y="354" width="292" height="8" rx="4" fill="#FBC117"/>
+  <circle cx="156" cy="254" r="31" fill="#FBC117"/>
+  <circle cx="250" cy="215" r="38" fill="#FBC117"/>
+  <circle cx="344" cy="254" r="31" fill="#FBC117"/>
+  <path d="M119 323C119 287 135 270 156 270C177 270 193 287 193 323H119Z" fill="#3E75A8"/>
+  <path d="M203 323C203 279 221 254 250 254C279 254 297 279 297 323H203Z" fill="#D9E2F1"/>
+  <path d="M307 323C307 287 323 270 344 270C365 270 381 287 381 323H307Z" fill="#C75C46"/>
+  <rect x="199" y="118" width="102" height="62" rx="12" fill="#252E47" stroke="#FBC117" stroke-width="3"/>
+  <circle cx="222" cy="149" r="9" fill="#FBC117"/>
+  <path d="M244 141H280M244 154H270" stroke="#AEB8CC" stroke-width="6" stroke-linecap="round"/>
+  <path d="M74 405H426" stroke="#3A4662" stroke-width="4" stroke-linecap="round"/>
+  <text x="250" y="445" text-anchor="middle" fill="#FBC117" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">SMARTTRAFFIC</text>
+</svg>

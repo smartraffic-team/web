@@ -5,8 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        title: ['Michroma', 'sans-serif'],
+        sans: ['Outfit', 'sans-serif'], // Define Outfit como a fonte principal/padrão
+      },
+    },
   },
   plugins: [],
 }
-
