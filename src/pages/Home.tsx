@@ -1,5 +1,4 @@
 import { Hero } from '../components/Hero'
-import graphic from '../../imgs/ELEMENTOS GRAFICOS 1.png'
 import kit from '../../imgs/MOCKUP KIT CAMERA.png'
 import application from '../../imgs/EXEMPLO 1 APLICAÇÃO.png'
 
@@ -124,7 +123,7 @@ export const Home = () => {
       </section>
 
       <section id="equipe" aria-labelledby="equipe-titulo" className="scroll-mt-24 max-w-6xl mx-auto px-6 py-20">
-        <img src={graphic} alt="" aria-hidden="true" width="3698" height="1708" loading="lazy" decoding="async" className="w-full h-24 sm:h-36 object-cover rounded-2xl mb-12" />
+        <img src="/ELEMENTOS GRAFICOS 1.svg" alt="" aria-hidden="true" width="3313" height="371" loading="lazy" decoding="async" className="relative left-1/2 mb-12 h-24 w-[calc(100vw-1rem)] max-w-none -translate-x-1/2 scale-x-[1.35] object-fill sm:h-36 sm:scale-x-[1.2]" />
         <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">Quem está por trás</p>
         <h2 id="equipe-titulo" className="font-title text-3xl md:text-4xl font-bold mb-5">Cinco estudantes. Um projeto em comum.</h2>
         <p className="text-gray-300 max-w-2xl leading-relaxed">Somos a equipe de desenvolvimento do SmartTraffic. Nosso trabalho reúne estudo e prática para explorar novas possibilidades no controle de trânsito.</p>
