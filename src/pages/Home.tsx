@@ -123,7 +123,9 @@ export const Home = () => {
       </section>
 
       <section id="equipe" aria-labelledby="equipe-titulo" className="scroll-mt-24 max-w-6xl mx-auto px-6 py-20">
-        <img src="/ELEMENTOS GRAFICOS 1.svg" alt="" aria-hidden="true" width="3313" height="371" loading="lazy" decoding="async" className="relative left-1/2 mb-12 h-24 w-[calc(100vw-1rem)] max-w-none -translate-x-1/2 scale-x-[1.35] object-fill sm:h-36 sm:scale-x-[1.2]" />
+        <div className="relative left-1/2 mb-12 w-screen -translate-x-1/2 overflow-hidden">
+          <img src="/ELEMENTOS GRAFICOS 1.svg" alt="" aria-hidden="true" width="3313" height="371" loading="lazy" decoding="async" className="relative left-1/2 h-24 w-[calc(100vw-1rem)] max-w-none -translate-x-1/2 scale-x-[1.35] object-fill sm:h-36 sm:scale-x-[1.2]" />
+        </div>
         <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">Quem está por trás</p>
         <h2 id="equipe-titulo" className="font-title text-3xl md:text-4xl font-bold mb-5">Cinco estudantes. Um projeto em comum.</h2>
         <p className="text-gray-300 max-w-2xl leading-relaxed">Somos a equipe de desenvolvimento do SmartTraffic. Nosso trabalho reúne estudo e prática para explorar novas possibilidades no controle de trânsito.</p>
