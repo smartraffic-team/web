@@ -1,54 +1,42 @@
-import camera from '../../imgs/MOCKUP CAMERA.png'
-
 export const Hero = () => {
   return (
-    <section className="px-6 py-20 md:py-32 max-w-6xl mx-auto">
-      {/* ALTERAÇÃO 1 & 3: Mudança na grid para texto ter mais espaço e centralização vertical */}
-      <div className="grid md:grid-cols-[1.2fr,0.8fr] gap-12 items-center">
-        
-        {/* Coluna de Texto (Esquerda) */}
-        <div>
-          <div className="inline-flex items-center gap-2 bg-[#FBC117]/10 px-4 py-2 rounded-full mb-6">
-            <span className="w-2 h-2 bg-[#FBC117] rounded-full animate-pulse"></span>
-            <span className="text-[#FBC117] text-sm font-medium">Projeto acadêmico • Tecnologia e mobilidade</span>
-          </div>
-          
-          <h1 className="font-title text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Smart<span className="text-[#FBC117]">Traffic</span>
+    <section className="relative isolate min-h-[625px] overflow-hidden border-b border-white/10 bg-[#181C2B]">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+        aria-label="Demonstração animada do sistema SmartTraffic"
+      >
+        <source src="/hero-section-video.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeos.
+      </video>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#181C2B]/90 via-[#181C2B]/35 to-transparent" />
+
+      <div className="relative mx-auto flex min-h-[625px] max-w-[1600px] items-start px-8 pt-[125px] sm:px-14 lg:px-[7%]">
+        <div className="relative z-10 max-w-[800px]">
+          <h1 className="whitespace-nowrap font-title text-4xl font-normal leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[3.45rem]">
+            Chega de <span className="text-[#FBC117]">esperar</span>
+            <br />
+            <span className="text-[#FBC117]">à toa</span> no sinal.
           </h1>
-          
-          <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-lg">
-            E se o semáforo acompanhasse o ritmo da sua via? Nossa proposta combina
-            visão computacional e controle adaptativo para ajustar o tempo do sinal
-            à demanda de veículos e ao tempo de espera.
+
+          <div aria-hidden="true" className="relative z-20 mt-5 h-1 w-[min(48vw,580px)] rounded-full bg-[#FBC117]" />
+
+          <p className="mt-5 max-w-[540px] text-base leading-relaxed text-white sm:text-lg">
+            Menos filas, mais fluidez. O SmartTraffic adapta os sinais à
+            necessidade real da estrada!
           </p>
-          
-          <div className="flex flex-wrap gap-4">
-            <a href="#como-funciona" className="bg-[#FBC117] hover:bg-[#F59E0B] text-[#181C2B] font-semibold px-6 py-3 rounded-xl transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FBC117]">
-              Conheça a solução →
-            </a>
-            <a href="#equipe" className="border border-gray-600 hover:border-[#FBC117] text-gray-300 px-6 py-3 rounded-xl transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FBC117]">
-              Nossa equipe
-            </a>
-          </div>
+
+          <a
+            href="#como-funciona"
+            className="mt-7 inline-flex items-center rounded-full bg-[#FBC117] px-6 py-3 text-base font-medium text-[#181C2B] shadow-lg shadow-[#FBC117]/25 transition hover:bg-[#F59E0B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FBC117]"
+          >
+            Conhecer Projeto
+          </a>
         </div>
-        
-        {/* Coluna da Imagem (Direita) */}
-        <figure className="overflow-hidden rounded-3xl border border-white/10 bg-[#1E2436] shadow-2xl">
-          {/* ALTERAÇÃO 2: Removido w-full, adicionado h-auto e mx-auto para a imagem não esticar horizontalmente */}
-          <img 
-            src={camera} 
-            alt="Mockup de câmera SmartTraffic em azul-escuro com detalhes amarelos e a marca na lateral" 
-            width="1805" 
-            height="2167" 
-            fetchPriority="high" 
-            className="h-auto max-h-[520px] object-contain bg-white mx-auto block" 
-          />
-          <figcaption className="px-6 py-5 border-t border-white/5">
-            <p className="text-sm font-semibold text-[#FBC117]">Visão computacional a serviço da mobilidade</p>
-            <p className="text-sm text-gray-300 mt-2">Representação conceitual da câmera com a identidade visual do projeto.</p>
-          </figcaption>
-        </figure>
       </div>
     </section>
   )
