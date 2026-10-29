@@ -1,6 +1,6 @@
 import { Hero } from '../components/Hero'
-import kit from '../../imgs/MOCKUP KIT CAMERA.png'
-import application from '../../imgs/EXEMPLO 1 APLICAÇÃO.png'
+import kit from '../../imgs/maquete_antiga.png'
+import application from '../../imgs/maquete_atual.png'
 
 const steps = [
   { title: 'Capturar', text: 'Câmeras posicionadas nos cruzamentos capturam imagens das vias.' },
@@ -104,19 +104,19 @@ export const Home = () => {
       <section aria-labelledby="artefatos-titulo" className="max-w-6xl mx-auto px-6 py-20">
         <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr] items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">Do conceito ao protótipo</p>
-            <h2 id="artefatos-titulo" className="font-title text-3xl md:text-4xl font-bold">Uma ideia que também pode ser vista.</h2>
-            <p className="text-gray-300 leading-relaxed mt-5">A identidade visual e os mockups ajudam a comunicar a pesquisa enquanto a equipe evolui a maquete, o código de visão e a plataforma de monitoramento.</p>
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">EVOLUÇÃO DA MAQUETE</p>
+            <h2 id="artefatos-titulo" className="font-title text-3xl md:text-4xl font-bold">Do primeiro conceito ao modelo final.</h2>
+            <p className="text-gray-300 leading-relaxed mt-5">Acompanhe a evolução do nosso projeto, desde a estrutura inicial de conceitos até o modelo detalhado e funcional que temos hoje. Aprimoramos os materiais e aprimoramos o realismo para representar a visão final.</p>
             <a href="#equipe" className="inline-flex mt-7 text-[#FBC117] font-semibold hover:underline">Conheça a equipe →</a>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <figure className="rounded-2xl overflow-hidden border border-white/10 bg-[#1E2436]">
+            <figure className="rounded-2xl overflow-hidden border border-white/10 bg-[#1E2436] mt-8">
               <img src={kit} alt="Mockup conceitual do kit de câmera SmartTraffic" className="w-full aspect-square object-cover" loading="lazy" />
-              <figcaption className="p-3 text-xs text-gray-400">Kit de captura</figcaption>
+              <figcaption className="p-3 text-xs text-gray-400">Conceito Inicial (Maqute Antiga) </figcaption>
             </figure>
             <figure className="rounded-2xl overflow-hidden border border-white/10 bg-[#1E2436] mt-8">
               <img src={application} alt="Exemplo visual da aplicação SmartTraffic" className="w-full aspect-square object-cover" loading="lazy" />
-              <figcaption className="p-3 text-xs text-gray-400">Aplicação visual</figcaption>
+              <figcaption className="p-3 text-xs text-gray-400">Resultado Final (Maqute Atual)</figcaption>
             </figure>
           </div>
         </div>
