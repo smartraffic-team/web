@@ -1,10 +1,16 @@
 export const About = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+      <div className="mb-12 rounded-2xl border border-[#FBC117]/30 bg-[#FBC117]/5 px-5 py-4 text-sm text-gray-300" role="status">
+        <span className="font-semibold uppercase tracking-widest text-[#FBC117]">Página em processo</span>
+        <span className="mx-2 text-[#FBC117]">·</span>
+        O projeto está sendo construído e atualizado.
+      </div>
+
+      {/* Conteúdo da página mantido para uso futuro.
       <div className="max-w-4xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">O projeto</p>
         
-        {/* Adicionado 'font-title' para usar Michroma */}
         <h1 className="font-title text-3xl md:text-5xl font-bold leading-tight">
           SmartTraffic: semáforos que respondem ao trânsito.
         </h1>
@@ -49,8 +55,9 @@ export const About = () => {
           <img src="/team-mockup.svg" alt="Ilustração conceitual da equipe SmartTraffic trabalhando em um cruzamento inteligente" className="w-full rounded-2xl" />
           <figcaption className="px-2 pt-4 text-sm text-gray-400">Mockup conceitual da equipe de desenvolvimento.</figcaption>
         </figure>
-      </section>
+      </section> */}
 
+      {/* Conteúdo da página mantido para uso futuro.
       <section className="grid gap-6 md:grid-cols-3 mt-24" aria-label="Princípios do projeto">
         {[
           ['Investigar', 'Testar a viabilidade do controle adaptativo em uma maquete reproduzível.'],
@@ -62,7 +69,7 @@ export const About = () => {
             <p className="text-gray-300 leading-relaxed mt-2">{text}</p>
           </div>
         ))}
-      </section>
+      </section> */}
     </div>
   )
 }

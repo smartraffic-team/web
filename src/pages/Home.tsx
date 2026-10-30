@@ -1,6 +1,11 @@
 import { Hero } from '../components/Hero'
 import kit from '../../imgs/maquete_antiga.png'
 import application from '../../imgs/maquete_atual.png'
+import marcelo from '../../imgs/marcelo.png'
+import cris from '../../imgs/cris.png'
+import paulo from '../../imgs/paulo.png'
+import joaoPaulo from '../../imgs/jp.png'
+import delucca from '../../imgs/delucca.png'
 
 const steps = [
   { title: 'Capturar', text: 'Câmeras posicionadas nos cruzamentos capturam imagens das vias.' },
@@ -9,7 +14,13 @@ const steps = [
   { title: 'Ajustar o sinal', text: 'O algoritmo usa esses dados para adaptar o tempo de verde às condições do cruzamento.' },
 ]
 
-const members = ['Cristhian', 'João Paulo', 'Marcelo', 'Bruno DeLucca', 'Paulo']
+const members = [
+  { name: 'Bruno De Lucca', role: 'Arquiteto de IoT', image: delucca, instagram: 'https://www.instagram.com/bru_dlucca/' },
+  { name: 'Cristhian', role: 'Desenvolvedor Backend', image: cris, instagram: 'https://www.instagram.com/cris.hatz/' },
+  { name: 'Paulo Seiji', role: 'Administrador de Database', image: paulo, instagram: 'https://www.instagram.com/psyjunior1/' },
+  { name: 'João Paulo', role: 'UX/UI Designer', image: joaoPaulo, instagram: 'https://www.instagram.com/um_jotape/' },
+  { name: 'Marcelo', role: 'Desenvolvedor Frontend', image: marcelo, instagram: 'https://www.instagram.com/sla_marcello/' },
+]
 
 export const Home = () => {
   return (
@@ -19,9 +30,9 @@ export const Home = () => {
       <section aria-label="Resumo do protótipo" className="border-y border-white/10 bg-[#141827]">
         <div className="max-w-6xl mx-auto px-6 py-8 grid gap-6 sm:grid-cols-3">
           {[
-            ['01', 'cruzamento', 'maquete acadêmica em estudo'],
-            ['02', 'grupos de sinal', 'controle local A e B'],
-            ['03', 'objetivo de pesquisa', 'comparar tempo de espera'],
+            ['01', 'câmera inteligente', 'captura imagens das vias'],
+            ['02', 'Arduino', 'controle local dos semáforos'],
+            ['03', 'visão computacional', 'análise do trânsito em tempo real'],
           ].map(([number, title, text]) => (
             <div key={title} className="flex items-start gap-4">
               <span className="font-title text-2xl font-bold text-[#FBC117]">{number}</span>
@@ -40,6 +51,24 @@ export const Home = () => {
           <div className="space-y-5 text-gray-300 leading-relaxed">
             <p>Você já passou por essa situação? Muitos semáforos operam com tempos pré-programados, sem considerar quantos veículos estão esperando naquele momento.</p>
             <p>Esse desencontro entre o tempo do sinal e a demanda das vias pode gerar filas e esperas desnecessárias. É esse problema que motiva nosso projeto: explorar como os dados do trânsito podem orientar o controle semafórico.</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="pitch-titulo" className="border-b border-white/10 bg-[#181C2B]">
+        <div className="max-w-5xl mx-auto px-6 py-16 md:py-20">
+          <div className="text-center mb-8">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">O pitch do projeto.</p>
+            <h2 id="pitch-titulo" className="font-title text-3xl md:text-4xl font-bold">Conheça a proposta</h2>
+          </div>
+          <div className="mx-auto aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-[#1E2436] shadow-2xl">
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube-nocookie.com/embed/Z6tWANLk36o"
+              title="Pitch do projeto Smartraffic"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>
@@ -124,17 +153,35 @@ export const Home = () => {
 
       <section id="equipe" aria-labelledby="equipe-titulo" className="scroll-mt-24 max-w-6xl mx-auto px-6 py-20">
         <div className="relative left-1/2 mb-12 w-screen -translate-x-1/2 overflow-hidden">
-          <img src="/ELEMENTOS GRAFICOS 1.svg" alt="" aria-hidden="true" width="3313" height="371" loading="lazy" decoding="async" className="relative left-1/2 h-24 w-[calc(100vw-1rem)] max-w-none -translate-x-1/2 scale-x-[1.35] object-fill sm:h-36 sm:scale-x-[1.2]" />
+          <img src="/ELEMENTOS GRAFICOS 1.svg" alt="" aria-hidden="true" width="3313" height="371" loading="lazy" decoding="async" className="relative left-1/2 h-auto w-screen max-w-none -translate-x-1/2" />
         </div>
         <p className="text-sm font-semibold uppercase tracking-widest text-[#FBC117] mb-4">Quem está por trás</p>
         <h2 id="equipe-titulo" className="font-title text-3xl md:text-4xl font-bold mb-5">Cinco estudantes. Um projeto em comum.</h2>
         <p className="text-gray-300 max-w-2xl leading-relaxed">Somos a equipe de desenvolvimento do SmartTraffic. Nosso trabalho reúne estudo e prática para explorar novas possibilidades no controle de trânsito.</p>
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5 mt-10">
+        <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5 mt-10">
           {members.map((member) => (
-            <li key={member} className="rounded-2xl border border-white/10 bg-[#1E2436] p-6">
-              <div aria-hidden="true" className="w-12 h-12 rounded-full bg-[#FBC117]/10 text-[#FBC117] flex items-center justify-center font-title text-xl font-bold mb-5">{member.charAt(0)}</div>
-              <h3 className="font-title text-lg font-semibold">{member}</h3>
-              <p className="text-sm text-gray-400 mt-2">Equipe de desenvolvimento</p>
+            <li key={member.name} className="group relative flex min-w-0 flex-col transition-transform duration-500 ease-out hover:z-10 hover:scale-110">
+              <div className="overflow-hidden rounded-t-2xl">
+                <img src={member.image} alt={`Foto de ${member.name}`} className="block h-auto w-full" loading="lazy" />
+              </div>
+              <div className="px-1 pt-5">
+                <h3 className="min-h-14 font-title text-base font-semibold sm:text-lg lg:whitespace-nowrap">{member.name}</h3>
+                <p className="mt-2 min-h-10 text-sm font-semibold uppercase tracking-widest text-[#FBC117]">{member.role}</p>
+                <a
+                  href={member.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-2 text-sm font-semibold transition duration-300 hover:border-transparent hover:bg-gradient-to-r hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] hover:text-white"
+                  aria-label={`Instagram de ${member.name}`}
+                >
+                  <svg aria-hidden="true" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                  </svg>
+                  Instagram
+                </a>
+              </div>
             </li>
           ))}
         </ul>

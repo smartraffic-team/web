@@ -1,9 +1,28 @@
-const stack: [string, string, string][] = [
-  ['Visão computacional', 'Python · OpenCV · YOLOv8n', 'A câmera observa a maquete e produz detecções por quadro.'],
-  ['Controle local', 'Arduino · serial 9600', 'O protótipo aciona dois grupos de sinalização, A e B.'],
-  ['Plataforma web', 'React · TypeScript · Vite', 'O painel futuro acompanha um cruzamento e sua telemetria.'],
-  ['Backend futuro', 'NestJS · Prisma · MySQL', 'Integração planejada para histórico e dados autenticados.'],
+const stack = [
+  { title: 'Visão computacional', tools: ['Python', 'OpenCV', 'YOLOv8n'], text: 'A câmera observa a maquete e produz detecções por quadro.' },
+  { title: 'Controle local', tools: ['Arduino', 'Serial'], text: 'O protótipo aciona dois grupos de sinalização, A e B.' },
+  { title: 'Plataforma web', tools: ['React', 'TypeScript', 'Vite'], text: 'O painel futuro acompanha um cruzamento e sua telemetria.' },
+  { title: 'Backend futuro', tools: ['NestJS', 'Prisma', 'MySQL'], text: 'Integração planejada para histórico e dados autenticados.' },
 ]
+
+const toolIcons: Record<string, string> = {
+  Python: 'https://cdn.simpleicons.org/python/3776AB',
+  OpenCV: 'https://cdn.simpleicons.org/opencv/5C3EE8',
+  YOLOv8n: 'https://cdn.simpleicons.org/ultralytics/111827',
+  Arduino: 'https://cdn.simpleicons.org/arduino/00979D',
+  React: 'https://cdn.simpleicons.org/react/61DAFB',
+  TypeScript: 'https://cdn.simpleicons.org/typescript/3178C6',
+  Vite: 'https://cdn.simpleicons.org/vite/646CFF',
+  NestJS: 'https://cdn.simpleicons.org/nestjs/E0234E',
+  Prisma: 'https://cdn.simpleicons.org/prisma/FFFFFF',
+  MySQL: 'https://cdn.simpleicons.org/mysql/4479A1',
+}
+
+const ToolIcon = ({ tool }: { tool: string }) => (
+  <span className="flex h-7 w-7 items-center justify-center rounded-md bg-white/10" aria-hidden="true">
+    <img src={toolIcons[tool]} alt="" className="h-5 w-5 object-contain" />
+  </span>
+)
 
 export const Docs = () => {
   return (
@@ -40,11 +59,18 @@ export const Docs = () => {
           <p className="text-gray-300 leading-relaxed mt-4 max-w-lg">A arquitetura separa a operação local da futura camada de monitoramento. O cruzamento não deve depender da internet para manter seu funcionamento básico.</p>
         </div>
         <div className="grid gap-3">
-          {stack.map(([title, tech, text]) => (
+          {stack.map(({ title, tools, text }) => (
             <article key={title} className="rounded-2xl border border-white/10 bg-[#1E2436] p-5">
-              <div className="flex flex-wrap justify-between gap-2">
+              <div className="flex flex-wrap items-start justify-between gap-4">
                 <h3 className="font-title font-semibold">{title}</h3>
-                <span className="text-xs text-[#FBC117]">{tech}</span>
+                <div className="ml-auto flex flex-wrap justify-end gap-2" aria-label={`Ferramentas de ${title}`}>
+                  {tools.map((tool) => (
+                    <span key={tool} className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-[#141827] py-1 pl-1 pr-2 text-xs text-gray-200">
+                      {toolIcons[tool] && <ToolIcon tool={tool} />}
+                      {tool}
+                    </span>
+                  ))}
+                </div>
               </div>
               <p className="text-sm text-gray-400 mt-2">{text}</p>
             </article>
