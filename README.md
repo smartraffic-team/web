@@ -2,53 +2,24 @@
 
 ## Descrição
 
-Site de apresentação do **SmartTraffic**
+Site de apresentação do **SmartTraffic**, uma proposta de controle inteligente de trânsito com visão computacional e IA. O objetivo é divulgar o problema, os objetivos e a abordagem do projeto acadêmico de forma clara e acessível ao público.
 
-> Este site **não** é o painel administrativo de operadores. Ele é uma vitrine pública do projeto acadêmico.
-
-## Tecnologias
-
-| Camada      | Tecnologias              |
-|-------------|--------------------------|
-| Frontend    | React, TypeScript, Vite  |
-| Estilização | Tailwind CSS             |
-| Ambiente    | Node.js 24, npm          |
+O site foi desenvolvido com **React**, **TypeScript**, **Vite** e **Tailwind CSS**, oferecendo uma interface responsiva e institucional — trata-se de uma vitrine pública do projeto, **não** do painel administrativo de operadores.
 
 ## Funcionalidades
 
 - Página de apresentação do projeto SmartTraffic
 - Explicação da abordagem com visão computacional e IA
-- Site institucional
-
-## Estrutura do Repositório
-
-```
-smartraffic-web/
-├── imgs/             -> imagens utilizadas para o website
-├── src/              -> Código-fonte React + TypeScript
-├── public/           -> Assets estáticos
-├── index.html        -> Entrada do Vite
-├── package.json      -> Dependências e scripts
-├── vite.config.ts    -> Configuração do Vite
-├── tailwind.config.* -> Configuração do Tailwind CSS
-└── tsconfig.json     -> Configuração do TypeScript
-```
-
-## Fluxograma
-
-```mermaid
-flowchart TD
-    Home[Home / Apresentação]
-    Home --> Problema[Problema e Contexto]
-    Home --> Objetivos[Objetivos e ODS 9/11]
-    Home --> Abordagem[Abordagem: Visão Computacional + IA]
-    Home --> Maquete
-    Home --> Equipe[Equipe]
-```
 
 ## Como rodar
 
-Com **Node.js 24** e **npm** instalados, execute na pasta do repositório:
+### Requisitos
+
+- **Node.js 24** e **npm** instalados
+
+### Passos
+
+Na pasta do repositório, execute:
 
 ```bash
 npm ci
