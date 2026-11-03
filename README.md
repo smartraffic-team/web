@@ -4,7 +4,7 @@
 
 Site de apresentação do **SmartTraffic**
 
-> Este site **não** é o painel administrativo de operadores. Ele é uma vitrine pública do projeto acadêmico — não envia comandos ao Arduino nem controla semáforos.
+> Este site **não** é o painel administrativo de operadores. Ele é uma vitrine pública do projeto acadêmico.
 
 ## Tecnologias
 
